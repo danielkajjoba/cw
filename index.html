@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form </title>
+    <style>
+        header, footer, h1, h2, h3, h4 { 
+            text-align: center;
+        }
+         nav {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 120px;
+        }
+        form {
+                max-width: 700px;
+                margin: 0 auto;
+        }
+        fieldset { padding: 20px;
+                    border: 1px solid #333;
+                    margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Isbat University</h1>
+    </header>
+    <nav>
+        <a href="home.php">HOME</a>
+        <a href="Programmes.php">PROGRAMMES</a>
+        <a href="contact.php">CONTACT US</a>
+    </nav>
+
+    <h2>Registration Form</h2>
+    <form 
+        action="register.php" method="post">
+        
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" required><br><br>
+            <label for="dob">Date Of Birth</label>
+            <input type="date" name="dob" id="dob" required><br><br>
+            <label for="id">Student ID</label>
+            <input type="text" name="id" id="id" pattern="STU[0-9]{7}" maxlength="10" title="Enter ID in the format STU2026001" placeholder="e.g., STU1234567" required><br><br>
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" required><br><br>
+            <label for="phone">Phone Number</label>
+            <input type="tel" name="phone" id="phone" maxlength="10" pattern="07[0-9]{8}" placeholder="e.g., 07XXXXXXXX" required><br><br>
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male" id="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="Female" id="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" value="Other" id="other">
+            <label for="other">Other</label><br><br>
+
+            <label for="Nationality">Nationality</label>
+            <select id="Nationality" name="Nationality" required>
+                <option value="">Select Nationality</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="South Sudan">South Sudan</option>
+                <option value="South Africa">South Africa</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Programmes Details</legend>
+            <label for="pos">Programme of Study</label>
+            <select id="pos" name="Programme of Study" required>
+                <option value="">Select Programme of Study</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Applied Information Technology">Applied Information Technology</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="Visual Effects">Visual Effects</option>
+                <option value="Cyber Security">Cyber Security</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Course Units</legend>
+            <label>Choose Course Units:</label>
+             <input type="checkbox" name="Course-unit" value="Mathematics" id="mathematics">
+             <label for="mathematics">Mathematics</label>
+
+             <input type="checkbox" name="Course-unit" value="Data Structures" id="data-structures">
+             <label for="data-structures">Data Structures</label>
+
+             <input type="checkbox" name="Course-unit" value="Algorithms" id="algorithms">
+             <label for="algorithms">Algorithms</label>
+
+             <input type="checkbox" name="Course-unit" value="Database Management Systems" id="database-management">
+             <label for="database-management">Database Management Systems</label><br>
+
+             <input type="checkbox" name="Course-unit" value="Operating Systems" id="operating-systems">
+             <label for="operating-systems">Operating Systems</label>
+
+             <input type="checkbox" name="Course-unit" value="Computer Networks" id="computer-networks">
+            <label for="computer-networks">Computer Networks</label>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+    
+    <footer>
+        <p>&copy; Daniel Kajjoba.<br>
+        012250063</p>
+    </footer>
+
+</body>
+</html>
